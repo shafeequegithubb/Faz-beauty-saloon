@@ -185,11 +185,11 @@ const GALLERY = [
     alt: "Modern hair styling",
     tall: false,
   },
-  {
-    id: "photo-1759134198561-e2041049419c",
-    alt: "Expert groom styling",
-    tall: true,
-  },
+  // {
+  //   id: "photo-1759134198561-e2041049419c",
+  //   alt: "Expert groom styling",
+  //   tall: true,
+  // },
 ];
 
 const WHY_CHOOSE = [
@@ -1317,11 +1317,10 @@ function BusinessHours() {
               return (
                 <div
                   key={h.day}
-                  className={`flex justify-between items-center px-8 py-4.5 transition-colors duration-200 ${
-                    isToday
-                      ? "bg-[#C9A84C]/08"
-                      : "hover:bg-white/[0.015]"
-                  } ${i < HOURS.length - 1 ? "border-b border-white/[0.05]" : ""}`}
+                  className={`flex justify-between items-center px-8 py-4.5 transition-colors duration-200 ${isToday
+                    ? "bg-[#C9A84C]/08"
+                    : "hover:bg-white/[0.015]"
+                    } ${i < HOURS.length - 1 ? "border-b border-white/[0.05]" : ""}`}
                   style={{ padding: "18px 32px" }}
                 >
                   <div className="flex items-center gap-3">
@@ -1350,13 +1349,12 @@ function BusinessHours() {
                     </span>
                   </div>
                   <span
-                    className={`text-[14px] font-medium tabular-nums ${
-                      h.open
-                        ? isToday
-                          ? "text-white"
-                          : "text-white/60"
-                        : "text-red-400/75"
-                    }`}
+                    className={`text-[14px] font-medium tabular-nums ${h.open
+                      ? isToday
+                        ? "text-white"
+                        : "text-white/60"
+                      : "text-red-400/75"
+                      }`}
                   >
                     {h.time}
                   </span>
